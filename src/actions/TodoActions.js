@@ -6,9 +6,14 @@ export const add = name => ({
 	name : name,
 });
 
+export const remove = id => ({
+	type: 'REMOVE_TODO',
+	id,
+})
+
 export const toggle = id => ({
 	type: 'TOGGLE_TODO',
-	id : id,
+	id,
 });
 
 export const setVisibilityFilter = filter => ({

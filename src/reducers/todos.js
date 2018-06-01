@@ -5,7 +5,6 @@ const todo = (state = {}, action) => {
 				id: action.id,
 				name: action.name,
 				completed: false,
-				archived: false,
 			}
 		
 		case 'TOGGLE_TODO':
@@ -30,6 +29,9 @@ const todos = (state = [], action) => {
 				todo({}, action)
 			];
 		
+		case 'REMOVE_TODO':
+			return state.filter(t => t.id !== action.id);
+
 		case 'TOGGLE_TODO':
 			return state.map(t => todo(t, action));
 

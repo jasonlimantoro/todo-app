@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { toggle } from "../actions/TodoActions";
+import { toggle, remove } from "../actions/TodoActions";
 import { getVisibleTodos } from "../reducers/Reducer";
 import TodoList from '../components/TodoList';
 
@@ -15,5 +15,5 @@ const mapStateToProps = state => ({
 
 export default connect(
 	mapStateToProps,
-	{toggle},
+	{toggle, remove},
 ) (TodoList);

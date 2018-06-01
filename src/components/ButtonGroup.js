@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ButtonGroup = ({ children }) => (
-  <div className="btn-group" role="group" aria-label="button-filter">
+const ButtonGroup = ({ children, style}) => (
+  <div className="btn-group" role="group" aria-label="button-filter" style={style}>
     {children}
   </div>
 );
