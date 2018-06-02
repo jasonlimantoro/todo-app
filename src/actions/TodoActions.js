@@ -11,12 +11,13 @@ export const remove = id => ({
 	id,
 })
 
-export const toggle = id => ({
+export const toggle = (id, target) => ({
 	type: 'TOGGLE_TODO',
+	target,
 	id,
 });
 
 export const setVisibilityFilter = filter => ({
 	type: 'SET_VISIBILITY_FILTER',
-	filter: filter,
+	filter,
 });

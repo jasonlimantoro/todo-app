@@ -5,13 +5,15 @@ const todo = (state = {}, action) => {
 				id: action.id,
 				name: action.name,
 				completed: false,
+				active: false,
 			}
 		
 		case 'TOGGLE_TODO':
 			if(state.id === action.id){
+				let target = action.target;
 				return {
 					...state,
-					completed: !state.completed,
+					[target]: !state[target],
 				}
 			} else {
 				return state;
@@ -48,8 +50,11 @@ export const getVisibleTodos = (state, filter) => {
 			return state.filter(t => t.completed);
 		case "SHOW_INCOMPLETED":
 			return state.filter(t => !t.completed);
+		case "SHOW_ACTIVE":
+			return state.filter(t => t.active);
+		case "SHOW_INACTIVE":
+			return state.filter(t => !t.active);
 		default:
 			return state;
 	}
 }
-
