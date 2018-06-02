@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const Button = ({disabled, onClickFilter, children}) => (
+export const Button = ({disabled, onClickFilter, bsStyle, children}) => (
 	<button
-		className="btn btn-secondary"
+		className={`btn btn-${bsStyle}`}
 		disabled={disabled}
 		onClick={onClickFilter}
 	>

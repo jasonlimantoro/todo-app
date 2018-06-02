@@ -15,6 +15,12 @@ const Filters = ()  => (
 			<FilterButton filter="SHOW_INCOMPLETED">
 				Incompleted
 			</FilterButton>
+			<FilterButton filter="SHOW_ACTIVE">
+				Active
+			</FilterButton>
+			<FilterButton filter="SHOW_INACTIVE">
+				Inactive
+			</FilterButton>
 		</ButtonGroup>
 	</div>
 );

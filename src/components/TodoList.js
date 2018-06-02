@@ -6,8 +6,9 @@ const TodoList = ({todos, toggle, remove}) => {
 	const lists = todos.map(todo => (
 		<Todo 
 			key={todo.id} 
-			onClickToDo={() => toggle(todo.id)} 
-			onRemoveTodo={() => remove(todo.id)} 
+			onToggleCompletedTodo={() => toggle(todo.id, 'completed')} 
+			onToggleActiveTodo={() => toggle(todo.id, 'active') }
+			onRemoveTodo={() => remove(todo.id)}
 			{...todo} 
 		/>
 	));

@@ -5,7 +5,13 @@ import { Button } from "../components/Button";
 
 
 const mapStateToProps = (state, ownProps) => ({
-	disabled : state.visibilityFilter === ownProps.filter
+	disabled : state.visibilityFilter === ownProps.filter,
+	bsStyle : ownProps.filter === 'SHOW_ALL' ? 'secondary'
+					: ownProps.filter === 'SHOW_COMPLETED' ? 'success'
+					: ownProps.filter === 'SHOW_INCOMPLETED' ? 'warning'
+					:	ownProps.filter === 'SHOW_ACTIVE' ? 'primary'
+					:																			'light'
+					
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
