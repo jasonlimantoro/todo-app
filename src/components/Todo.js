@@ -1,6 +1,8 @@
 import React from "react";
 import ButtonGroup from "./ButtonGroup";
 
+import '../styles/list.css';
+
 export const Todo = ({
 	onToggleCompletedTodo,
 	onToggleActiveTodo,
@@ -9,7 +11,7 @@ export const Todo = ({
 	completed,
 	active,
 }) => (
-	<li className={`list-group-item ${active && 'active'}`}>
+	<li className={`list-group-item ${active ? 'active' : ''}`}>
 		<span style={{ textDecoration: completed && "line-through" }}>
 			{name}
 		</span>{" "}

@@ -16,8 +16,8 @@ const mapStateToProps = state => ({
 const App = ({ todos }) => ( 
 	<div className="App">
 		<GridCenter>
-			<div className="col-md-10">
-				<h1>New Todos<span className="badge badge-info">{todos.length}</span></h1>
+			<div className="col-xs-12 col-sm-8">
+				<h1>New Todos <span className="badge badge-danger">{todos.length}</span></h1>
 				<AddTodo />
 				<DisplayTodos />
 				<Filters />
