@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const GridCenter = ({children}) => ( 
 	<div className="container">
-		<div className="row my-flex-container justify-content-center">
+		<div className="row justify-content-center">
 			{children}
 		</div>
 	</div>

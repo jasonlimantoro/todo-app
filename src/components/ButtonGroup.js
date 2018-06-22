@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ButtonGroup = ({ children, style}) => (
-  <div className="btn-group" role="group" aria-label="button-filter" style={style}>
+const ButtonGroup = ({ children, style, vertical }) => (
+  <div className={`btn-group${vertical ? '-vertical' : ''}`} role="group" aria-label="button-filter" style={style}>
     {children}
   </div>
 );
